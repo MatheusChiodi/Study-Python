@@ -1,11 +1,21 @@
-# criador de mascara de cnpj (xx.xxx.xxx/xxxx-xx)
-def mascara_cnpj(numeros):
-    if len(numeros) != 14 or not numeros.isdigit():
-        return "CNPJ inválido"
-    else:
-        cnpj_formatado = f"{numeros[:2]}.{numeros[2:5]}.{numeros[5:8]}/{numeros[8:12]}-{numeros[12:]}"
-        return cnpj_formatado
+# Fazer um algoritmo para ler um número inteiro entre 1 e 12 e mostrar o mês correspondente.
+# Caso o valor digitado não estiver no intervalo solicitado, mostrar uma mensagem. 
+
+numero = int(input('Digite um numero do mes: '))
+
+if (numero > 12) and (numero < 1):
+    if numero == 1: print('Janeiro')
+    elif numero == 2: print('Fevereiro')
+    elif numero == 3: print('Março')
+    elif numero == 4: print('Abril')
+    elif numero == 5: print('Maio')
+    elif numero == 6: print('Junho')
+    elif numero == 7: print('Julho')
+    elif numero == 8: print('Agosto')
+    elif numero == 9: print('Setembro')
+    elif numero == 10: print('Outubro')
+    elif numero == 11: print('Novembro')
+    elif numero == 12: print('Dezembro')
+else:
+    print('Numero invalido')
     
-numeros = input('Digite os numeros do seu cnpj: ')
-cnpj_com_mascara = mascara_cnpj(numeros)
-print(cnpj_com_mascara)
